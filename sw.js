@@ -1,8 +1,8 @@
 //imports
 importScripts('js/sw-utils.js');
 
-const STATIC_CACHE    ='static-v4';
-const DYNAMIC_CACHE   ='dynamic-v2';
+const STATIC_CACHE    ='static-v5';
+const DYNAMIC_CACHE   ='dynamic-v3';
 const INMUTABLE_CACHE ='inmutable-v1';
 
 const APP_SHELL=[
@@ -42,7 +42,7 @@ self.addEventListener('activate',e=>{
   //Borro todos los caches static-n donde n no sea el actual
   const respuesta= caches.keys().then(keys=>{
     keys.forEach(key=>{
-      
+
       if(key !== STATIC_CACHE
         && key.includes('static'))
       {
