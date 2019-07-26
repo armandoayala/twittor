@@ -1,4 +1,4 @@
-var url=windows.location.href;
+var url=window.location.href;
 var swLocation='/twittor/sw.js';
 
 
@@ -8,7 +8,7 @@ if ( navigator.serviceWorker )
     {
       swLocation='/sw.js';
     }
-  
+
     navigator.serviceWorker.register(swLocation);
 }
 
